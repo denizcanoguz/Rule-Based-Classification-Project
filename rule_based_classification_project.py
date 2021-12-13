@@ -60,7 +60,7 @@ df.groupby(["COUNTRY", "SOURCE","SEX","AGE"]).agg({"PRICE":"mean"}).round(2)
 #TASK:3
 
 # Çıktıyı PRICE’a göre sıralayınız.Önceki sorudaki çıktıyı daha iyi görebilmek için sort_values metodunu azalan olacak şekilde PRICE’a göre uygulayınız. Çıktıyı agg_df olarak kaydediniz.
-agg_df = df.groupby(["COUNTRY", "SOURCE","SEX","AGE"])["PRICE"].agg("mean").sort_values(ascending=False)
+agg_df = df.groupby(["COUNTRY", "SOURCE","SEX","AGE"]).agg({"PRICE": "mean"}).sort_values("PRICE",ascending=False)
 
 #TASK:4
 
